@@ -1,23 +1,19 @@
 void keyPressed() {
-  if (key == UP)       up = true;
-  if (key == LEFT)     left = true;
-  if (key == RIGHT)    right = true;
+  if (key == LEFT_UP)       left_up = true;
+  if (key == LEFT_DOWN)     left_down = true;
+  if (key == RIGHT_UP)      right_up = true;
+  if (key == RIGHT_DOWN)    right_down = true;
+  if (key == RESET)         reset = true;
+  if (key == PAUSE)         pause = true;
+  if (key == START)         start = true;
 }
 
 void keyReleased() {
-  if (key == UP)       up = false;
-  if (key == LEFT)     left = false;
-  if (key == RIGHT)    right = false;
-}
-
-float radiusIncrement = 0.5;
-
-void detectKeys() {
-  println(ballRadius);
-  if (left)
-    ballX-=ballRadius;
-  if (right) 
-    ballX+=ballRadius;
-  if (up)
-    ballY-=ballRadius;
+  if (key == LEFT_UP)       left_up = false;
+  if (key == LEFT_DOWN)     left_down = false;
+  if (key == RIGHT_UP)      right_up = false;
+  if (key == RIGHT_DOWN)    right_down = false;
+  if (key == RESET)         reset = false;
+  if (key == PAUSE)         pause = false;
+  if (key == START)         start = false;
 }
